@@ -1,0 +1,99 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+body {
+    background: linear-gradient(to bottom, #1a202c, white);
+    font-family: 'Roboto',sans-serif;
+    height: 100vh;
+    width: 100vw;
+}
+
+header {
+    height: 20vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 100;
+    nav {
+        display: flex;
+        flex-direction: column;
+        height: 0;
+        transition: height 500ms;
+        .select {
+            height: 50%;
+            width: 100%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .options {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            height: 50%;
+            width: 100%;
+        }
+        
+        button, p {
+            visibility: hidden;
+        }  
+    }
+    
+    .arrow-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 100px;
+            height: 50px;
+        }
+    }
+}
+
+
+header:hover {
+    nav {
+        transition: height 500ms;
+        height: 100%;
+        background: transparent;
+        box-shadow: 0 4px 8px black;
+        p {
+            visibility: visible;
+            font-size: larger;
+            text-align: center;
+        }
+        button {
+            visibility: visible;
+            font-family: inherit;
+            font-size: large;
+            width: 25%;
+            height: 100%;
+            background: transparent;
+            border: none;
+            transition: color 500ms;
+
+            &:hover {
+                transition: color 500ms;
+                color: white;
+            }
+            &:active {
+                transition: color 500ms;
+                color: black;
+            }
+        }
+    }
+
+    .arrow-container {
+        img {
+            visibility: hidden;
+        }
+    }
+}
