@@ -12,7 +12,7 @@ const answers = [];
 
 export function resetPage(nextbtn,prevbtn,buttons) {
     if (quizComplete) {
-        document.body.style.background = 'linear-gradient(to bottom, #1a202c 20%, white 80%)';
+        document.body.style.background = 'linear-gradient(to top, #1a202c, #4a5568)';
         document.getElementById('select-quiz').style.display = 'grid';
         document.getElementById('quiz-lbl').innerHTML = 'Select a quiz to start';
         if (document.getElementById('selected-answers').innerHTML === 'Your answers' &&
@@ -21,7 +21,7 @@ export function resetPage(nextbtn,prevbtn,buttons) {
             unloadAnswers();
         }
     } else {
-        document.body.style.background = 'linear-gradient(to bottom, #1a202c 20%, white 80%)';    
+        document.body.style.background = 'linear-gradient(to top, #1a202c, #4a5568)';    
         document.getElementById('select-quiz').style.display = 'grid';
         document.getElementById('quiz-lbl').innerHTML = 'Select a quiz to start';
         document.getElementById('title').innerHTML = '';
@@ -284,7 +284,6 @@ function loadAnswers() {
         answerbox.style.fontSize = '12px';
         answerbox.style.fontWeight = 'bold';
         answerbox.style.color = displayColors[i];
-        answerbox.style.border = '1px solid white';
     }
     answersLoaded = true;
 }

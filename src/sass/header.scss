@@ -9,7 +9,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 
 body {
-    background: linear-gradient(to bottom, #1a202c, white);
+    background: linear-gradient(to top, #1a202c, #4a5568);
     font-family: 'Roboto',sans-serif;
     height: 100vh;
     width: 100vw;
@@ -20,67 +20,37 @@ body {
         height: 20vh;
         width: 100vw;
         position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         z-index: 100;
         nav {
             display: flex;
             flex-direction: column;
-            height: 0;
-            transition: height 500ms;
-            .select {
-                height: 50%;
-                width: 100%;
-                color: white;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            
-            .options {
-                display: flex;
-                align-items: center;
-                justify-content: space-evenly;
-                height: 50%;
-                width: 100%;
-            }
-            
-            button, p {
-                visibility: hidden;
-            }  
-        }
-        
-        .arrow-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            img {
-                width: 100px;
-                height: 50px;
-            }
-        }
-    }
-    
-    
-    header:hover {
-        nav {
-            transition: height 500ms;
-            height: 100%;
+            height: 40%;
+            width: 90%;
+            border-radius: 40px;
             background: transparent;
             box-shadow: 0 4px 8px black;
-            p {
-                visibility: visible;
-                font-size: larger;
-                text-align: center;
+
+            .options {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                height: 100%;
+                width: 100%;
             }
+            
             button {
-                visibility: visible;
                 font-family: inherit;
                 font-size: large;
+                font-weight: 500;
                 width: 20%;
                 height: 100%;
                 background: transparent;
                 border: none;
                 transition: color 150ms;
-    
+
                 &:hover {
                     transition: color 150ms;
                     color: white;
@@ -89,12 +59,10 @@ body {
                     transition: color 150ms;
                     color: black;
                 }
-            }
-        }
-    
-        .arrow-container {
-            img {
-                visibility: hidden;
+            }  
+            p {
+                font-size: larger;
+                text-align: center;
             }
         }
     }
@@ -106,27 +74,22 @@ body {
         height: 20vh;
         width: 100vw;
         position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         z-index: 100;
         nav {
-            transition: height 500ms;
-            height: 100%;
+            height: 40%;
+            width: 90%;
+            border-radius: 40px;
             background: transparent;
             box-shadow: 0 4px 8px black;
-
-            .select {
-                height: 50%;
-                width: 100%;
-                color: white;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
             
             .options {
                 display: flex;
                 align-items: center;
                 justify-content: space-evenly;
-                height: 50%;
+                height: 100%;
                 width: 100%;
             }
             p {
@@ -146,11 +109,6 @@ body {
                     transition: color 150ms;
                     color: white;
                 }
-            }
-        }
-        .arrow-container {
-            img {
-                display: none;
             }
         }
     }
