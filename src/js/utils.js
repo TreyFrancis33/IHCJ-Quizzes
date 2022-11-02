@@ -281,7 +281,6 @@ function loadAnswers() {
         answerbox.style.display = 'flex';
         answerbox.style.alignItems = 'center';
         answerbox.style.justifyContent = 'center';
-        answerbox.style.fontSize = '12px';
         answerbox.style.fontWeight = 'bold';
         answerbox.style.color = displayColors[i];
     }

@@ -15,41 +15,56 @@ body {
     width: 100vw;
 }
 
+@mixin header {
+    height: 20vh;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+@mixin nav($width, $radius) {
+    height: 40%;
+    width: $width;
+    border-radius: $radius;
+    background: transparent;
+    box-shadow: 0 4px 8px black;
+}
+
+@mixin options  {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+@mixin button($fontSize) {
+    font-family: inherit;
+    font-size: $fontSize;
+    font-weight: 500;
+    width: 20%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    transition: color 150ms;
+}
+
+
 @media only screen and (min-width: 501px) {
     header {
-        height: 20vh;
-        width: 100vw;
-        position: fixed;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 100;
+        @include header();
         nav {
-            display: flex;
-            flex-direction: column;
-            height: 40%;
-            width: 90%;
-            border-radius: 40px;
-            background: transparent;
-            box-shadow: 0 4px 8px black;
+            @include nav(90%,40px);
 
             .options {
-                display: flex;
-                justify-content: space-evenly;
-                align-items: center;
-                height: 100%;
-                width: 100%;
+                @include options();
             }
             
             button {
-                font-family: inherit;
-                font-size: large;
-                font-weight: 500;
-                width: 20%;
-                height: 100%;
-                background: transparent;
-                border: none;
-                transition: color 150ms;
+                @include button(large);
 
                 &:hover {
                     transition: color 150ms;
@@ -69,47 +84,44 @@ body {
 }
 
 
-@media only screen and (max-width: 500px) {
+@media only screen and (min-width: 301px) and (max-width: 500px) {
     header {
-        height: 20vh;
-        width: 100vw;
-        position: fixed;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 100;
+        @include header();
         nav {
-            height: 40%;
-            width: 90%;
-            border-radius: 40px;
-            background: transparent;
-            box-shadow: 0 4px 8px black;
+            @include nav(100%,none);
             
             .options {
-                display: flex;
-                align-items: center;
-                justify-content: space-evenly;
-                height: 100%;
-                width: 100%;
+                @include options();
             }
             p {
                 font-size: larger;
                 text-align: center;
             }
             button {
-                font-family: inherit;
-                font-size: large;
-                width: 20%;
-                height: 100%;
-                background: transparent;
-                border: none;
-                transition: color 150ms;
-
-                &:active {
-                    transition: color 150ms;
-                    color: white;
-                }
+                @include button(small)
             }
+        }
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    header {
+        @include header();
+        nav {
+            @include nav(100%,none);
+
+            .options {
+                @include options();
+            }
+
+            p {
+                font-size: larger;
+                text-align: center;
+            }
+            
+            button {
+                @include button(x-small)
+            }  
         }
     }
 }
