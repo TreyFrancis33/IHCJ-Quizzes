@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/quizbody.css">
+    <script type="module" src="./js/quiz.js" defer></script>
+    <title>Front End Quizzes</title>
+</head>
+<body id="body">
+    <header>
+        <nav>
+            <div class="color-trans">
+                <div class="color-trans-two"></div>
+            </div>
+            <div class="options">
+                <button id="htmlbtn">HTML Quiz</button>
+                <button id="cssbtn">CSS Quiz</button>
+                <button id="reset">Reset</button>
+                <button id="jsbtn">JavaScript Quiz</button>
+                <button id="internetbtn">Internet Quiz</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="select-quiz">
+            <div class="select-header">
+                <label id="quiz-lbl">Select a quiz to start</label>
+            </div>
+            <div id="selected-answers"></div>
+            <div id="answered-questions">
+                <div class="answer-grid1">
+                    <div id="answer1"></div>
+                    <div id="answer2"></div>
+                    <div id="answer3"></div>
+                    <div id="answer4"></div>
+                    <div id="answer5"></div>
+                </div>
+                <div class="answer-grid2">
+                    <div id="answer6"></div>
+                    <div id="answer7"></div>
+                    <div id="answer8"></div>
+                    <div id="answer9"></div>
+                    <div id="answer10"></div>
+                </div>
+            </div>
+            </section> 
+        <section class="quiz-body">
+            <div class="quiz-title">
+                <h1 id="title"></h1>
+            </div>
+            <div class="question-answer">
+                <div class="question-container">
+                    <div class="question-box">
+                        <h3 id="question"></h3>
+                    </div>
+                </div>
+                <div class="answers-box">
+                    <button class="btn" id="Abtn"></button>
+                    <button class="btn" id="Bbtn"></button>
+                    <button class="btn" id="Cbtn"></button>
+                    <button class="btn" id="Dbtn"></button>
+                </div>
+            </div>
+            <div class="btn-container">
+                <button id="prevbtn">Previous</button>
+                <div class="save-slot">
+                    <label id="save-slot"></label>
+                </div>
+                <button id="nextbtn">Next</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
